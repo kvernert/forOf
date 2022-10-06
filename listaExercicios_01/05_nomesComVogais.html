@@ -8,15 +8,19 @@
     //ENTRADA
     let listaDeNomes = ["Amanda", "Eduardo", "Fábio", "Evelin", "César", "José", "Ivo", "Eva", "Otávio", "Inez", "Osmar", "Ulisses"];
     let nomesVogal = [];
+    let resto = [];
 
     //PROCESSAMENTO
-
-    for (nomes of listaDeNomes){
-        if(nomes === fruta.lastIndexOf("A") || nomes === fruta.lastIndexOf("E") || nomes === fruta.lastIndexOf("I") || nomes === fruta.lastIndexOf("O") || nomes === fruta.lastIndexOf("U")){
-              nomesVogal.push(nomes);
+    for (let nomes of listaDeNomes){
+        if(nomes.charAt(0) === "A" || nomes.charAt(0) === "E" || nomes.charAt(0) === "I" || nomes.charAt(0) === "O" || nomes.charAt(0) === "U"){
+            nomesVogal.push(nomes);
+        }
+        else{
+            resto.push(nomes);
         }
     }
     //SAÍDA
-    document.write(`Os nomes que começam com vogal é ${nomesVogal.sort()}`);
+    document.write(`Os nomes que começam com vogal é ${nomesVogal.sort()} <br/>`);
+    document.write(`Os restos é ${resto.sort()}`);
 
 </script>

@@ -7,13 +7,19 @@
 
     //ENTRADA
     let listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
+    let listaJoao = [];
+    let resto = [];
 
     //PROCESSAMENTO
-    for(nomes of listaDeNomes){
-        
+
+    for(nome of listaDeNomes){
+        if(nome.toUpperCase().replace("Ã","A").search("JOAO") >= 0){
+        listaJoao.push(nome)}
+        else{
+            resto.push(nome);
+        }
     }
-
-
     //SAÍDA
+    document.write(`Os nomes que tem João são ${listaJoao}, e o resto é ${resto}`);
 
 </script>
